@@ -1,0 +1,25 @@
+<div class="navbar">
+  <h3 class = 'navbar-brand'>Movie Lists</h3>
+  <%= link_to("Lists",lists_path)%>
+  <%= link_to("Lists",lists_path)%>
+</div>
+
+<div class="container">
+  <div class="row">
+   <%@lists.each do |list|%>
+      <div class="col-4">
+        <div class="card">
+          <div class="card-body">
+            <h5> <%= list.name %></h5>
+            <%= link_to("Go to the list", list_path(list))%>
+          </div>
+        </div>
+      </div>
+   <%end%>
+  </div>
+
+</div>
+
+<div class="container d-flex justify-content-center">
+  <h4><%=link_to("create a new list", new_list_path) %></h4>
+</div>

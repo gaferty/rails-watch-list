@@ -1,0 +1,6 @@
+<h3>Here are all the movies in our database</h3>
+<ul>
+  <% @movies.each do |movie|%>
+   <li><%= link_to(movie.title, movie_path(movie))%></li>
+  <%end%>
+</ul>

@@ -7,3 +7,10 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+require "faker"
+
+
+10.times do
+  Movie.create(title: Faker::Movie.title, overview: Faker::Quote.famous_last_words, rating: rand(0..10))
+end
